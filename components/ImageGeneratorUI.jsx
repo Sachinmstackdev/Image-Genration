@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Button } from "./ui/button"
-import { Textarea } from "./ui/textarea"
+import { Button } from "./ui/Button"
+import { Textarea } from "./ui/Textarea"
 import { CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { Share2, Download, Clock, Bot, Menu, X, Eye } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
