@@ -20,13 +20,29 @@ export default async function handler(req, res) {
   }
 
   try {
+    const input = { prompt };
+    
+    // Only include negative_prompt if it's provided
+    if (negative_prompt && negative_prompt.trim() !== '') {
+      input.negative_prompt = negative_prompt;
+    }
+
     const prediction = await replicate.predictions.create({
       version: '8beff3369e81422112d93b89ca01426147de542cd4684c244b673b105188fe5f',
-      input: { prompt, negative_prompt },
+      input,
     });
 
     res.status(201).json(prediction);
   } catch (error) {
-    res.status(500).json({ detail: error.message });
+    if (error.response) {
+      // API responded with an error
+      res.status(error.response.status).json({ detail: error.response.data });
+    } else if (error.request) {
+      // Network error or no response
+      res.status(500).json({ detail: 'No response received from Replicate API' });
+    } else {
+      // Other errors
+      res.status(500).json({ detail: error.message });
+    }
   }
 }

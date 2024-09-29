@@ -7,6 +7,7 @@ import { CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { Share2, Download, Clock, Bot, Menu, X, Eye } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ResizableBox } from 'react-resizable'
+import Image from 'next/image';
 
 const LightEffect = () => (
   <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse-slow" />
@@ -440,7 +441,7 @@ export default function FuturisticImageGeneratorUI() {
               exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <img src={viewImage} alt="Viewed Image" className="w-full h-auto max-w-[1024px] max-h-[768px] object-contain" />
+              <Image src={viewImage} layout="intrinsic" width={1024} height={768} onError={() => setError("Failed to load image.")} alt="Viewed Image" className="w-full h-auto max-w-[1024px] max-h-[768px] object-contain" />
               <Button
                 className="mt-4 bg-pink-500 text-white hover:bg-pink-600"
                 onClick={() => setViewImage(null)}
