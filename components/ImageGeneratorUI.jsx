@@ -85,6 +85,18 @@ export default function FuturisticImageGeneratorUI() {
     }
   }
 
+  const handleReset = () => {
+    setPrompt("")
+    setNegativePrompt("")
+    setProgress(0)
+    setIsGenerating(false)
+    setError("")
+    // Don't clear generated images on reset
+    // setGeneratedImages([])
+    // Clear the predictionId to prevent unintended API calls
+    setPredictionId(null)
+  }
+
   const handleShare = async (imageUrl) => {
     const shareData = {
       title: 'Generated Image',
@@ -321,14 +333,7 @@ export default function FuturisticImageGeneratorUI() {
                   <Button 
                     variant="outline" 
                     className="bg-[#2A2A2C] text-pink-400 border-[#3A3A3C] hover:bg-[#3A3A3C] hover:text-pink-300 text-sm"
-                    onClick={() => {
-                      setPrompt("")
-                      setNegativePrompt("")
-                      setProgress(0)
-                      setIsGenerating(false)
-                      setGeneratedImages([])
-                      setError("")
-                    }}
+                    onClick={handleReset}
                   >
                     Reset
                   </Button>
