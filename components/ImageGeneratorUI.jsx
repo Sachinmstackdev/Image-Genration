@@ -448,7 +448,15 @@ export default function FuturisticImageGeneratorUI() {
               exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <Image src={viewImage} layout="intrinsic" width={1024} height={768} onError={() => setError("Failed to load image.")} alt="Viewed Image" className="w-full h-auto max-w-[1024px] max-h-[768px] object-contain" />
+              <div className="relative w-full h-[768px]">
+                <Image 
+                  src={viewImage} 
+                  alt="Viewed Image"
+                  fill
+                  className="object-contain"
+                  onError={() => setError("Failed to load image.")}
+                />
+              </div>
               <Button
                 className="mt-4 bg-pink-500 text-white hover:bg-pink-600"
                 onClick={() => setViewImage(null)}

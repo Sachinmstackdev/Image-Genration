@@ -637,7 +637,13 @@ export default function ImageGeneration() {
                 </div>
                 
                 <div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Need More Help?</h3>                  <p className="text-gray-600 dark:text-gray-400">                    Contact our support team at{' '}                    <a                       href="mailto:support@eve-ai.com"                       className="text-blue-600 hover:text-blue-700 underline"                    >                      support@eve-ai.com                    </a>                  </p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Need More Help?</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Contact our support team at{' '}
+                    <a href="mailto:support@eve-ai.com" className="text-blue-600 hover:text-blue-700 underline">
+                      support@eve-ai.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </motion.div>
