@@ -291,7 +291,7 @@ export default function FuturisticImageGeneratorUI() {
                       >
                         {image ? (
                           <>
-                            <img src={image} alt={`Generated Image ${index + 1}`} className="w-full h-full object-cover" />
+                            <Image src={image} alt={`Generated Image ${index + 1}`} fill className="object-cover" />
                             <div className="absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-50 flex justify-center space-x-2">
                               <Button
                                 variant="ghost"
@@ -386,7 +386,9 @@ export default function FuturisticImageGeneratorUI() {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
                   <div className="relative">
-                    <img src={item.images[0]} alt={`History ${index + 1}`} className="w-full h-32 object-cover rounded mb-3" />
+                    <div className="relative w-full h-32 mb-3 rounded overflow-hidden">
+                      <Image src={item.images[0]} alt={`History ${index + 1}`} fill className="object-cover" />
+                    </div>
                     <div className="absolute bottom-3 left-0 right-0 flex justify-center space-x-3">
                       <Button
                         variant="ghost"

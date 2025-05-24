@@ -621,7 +621,7 @@ export default function ImageGeneration() {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Writing Better Prompts</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                     <li>• Be specific about what you want to see</li>
-                    <li>• Include style descriptions (e.g., "photorealistic", "cartoon", "oil painting")</li>
+                    <li>• Include style descriptions (e.g., &quot;photorealistic&quot;, &quot;cartoon&quot;, &quot;oil painting&quot;)</li>
                     <li>• Mention lighting and mood</li>
                     <li>• Use commas to separate different elements</li>
                   </ul>
@@ -637,10 +637,7 @@ export default function ImageGeneration() {
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Need More Help?</h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Contact our support team at <a href="mailto:support@eve-ai.com" className="text-blue-600 hover:text-blue-700 underline">support@eve-ai.com</a>
-                  </p>
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Need More Help?</h3>                  <p className="text-gray-600 dark:text-gray-400">                    Contact our support team at{' '}                    <a                       href="mailto:support@eve-ai.com"                       className="text-blue-600 hover:text-blue-700 underline"                    >                      support@eve-ai.com                    </a>                  </p>
                 </div>
               </div>
             </motion.div>
