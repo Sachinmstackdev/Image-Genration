@@ -32,7 +32,7 @@ const plans = [
     id: 'premium',
     name: 'Premium',
     icon: <Crown className="w-6 h-6 text-yellow-500" />,
-    price: '$19',
+    price: '$9',
     period: '/month',
     description: 'For serious creators',
     features: [
@@ -51,7 +51,7 @@ const plans = [
     id: 'enterprise',
     name: 'Enterprise',
     icon: <Building className="w-6 h-6 text-purple-500" />,
-    price: '$99',
+    price: '$49',
     period: '/month',
     description: 'For teams and businesses',
     features: [
