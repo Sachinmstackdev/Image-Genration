@@ -20,8 +20,8 @@ import {
 } from 'lucide-react';
 
 // Constants for Ideogram model
-const STYLE_TYPES = ['AUTO', 'GENERAL', 'REALISTIC', 'DESIGN', 'RENDER_3D', 'ANIME'];
-const MAGIC_PROMPT_OPTIONS = ['AUTO', 'ON', 'OFF'];
+const STYLE_TYPES = ['None', 'Auto', 'General', 'Realistic', 'Design'];
+const MAGIC_PROMPT_OPTIONS = ['Auto', 'On', 'Off'];
 
 const ASPECT_RATIOS = [
   { value: '1:1', label: 'Square', resolution: '1024x1024', class: 'aspect-square' },
@@ -71,8 +71,8 @@ export default function ImageGeneration() {
   const [safetyFilterLevel, setSafetyFilterLevel] = useState('block_medium_and_above');
   const [safetyTolerance, setSafetyTolerance] = useState(2);
   const [raw, setRaw] = useState(false);
-  const [styleType, setStyleType] = useState('AUTO');
-  const [magicPromptOption, setMagicPromptOption] = useState('AUTO');
+  const [styleType, setStyleType] = useState('Auto');
+  const [magicPromptOption, setMagicPromptOption] = useState('Auto');
   const [seed, setSeed] = useState<number | undefined>(undefined);
 
   const generateContent = async (e: React.FormEvent) => {

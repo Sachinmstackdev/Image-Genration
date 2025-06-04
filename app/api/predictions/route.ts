@@ -40,8 +40,8 @@ export async function POST(req: Request) {
     const input: IdeogramInput = {
       prompt,
       resolution: resolution || "1024x1024",
-      style_type: style_type || "AUTO",
-      magic_prompt_option: magic_prompt_option || "AUTO"
+      style_type: style_type || "Auto",
+      magic_prompt_option: magic_prompt_option || "Auto"
     };
 
     // Add seed if provided
