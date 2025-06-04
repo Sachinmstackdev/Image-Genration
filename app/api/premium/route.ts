@@ -1,6 +1,7 @@
 import { currentUser, clerkClient } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
+// Premium subscription management API
 export async function POST(req: Request) {
   try {
     const user = await currentUser();
