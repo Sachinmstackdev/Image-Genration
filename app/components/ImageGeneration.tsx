@@ -27,8 +27,7 @@ const ASPECT_RATIOS = [
   { value: '1:1', label: 'Square', resolution: '1024x1024', class: 'aspect-square' },
   { value: '16:9', label: 'Landscape', resolution: '1024x576', class: 'aspect-video' },
   { value: '9:16', label: 'Portrait', resolution: '576x1024', class: 'aspect-[9/16]' },
-  { value: '4:3', label: 'Standard', resolution: '1024x768', class: 'aspect-[4/3]' },
-  { value: '3:2', label: 'Classic', resolution: '1024x683', class: 'aspect-[3/2]' }
+  { value: '4:3', label: 'Standard', resolution: '1024x768', class: 'aspect-[4/3]' }
 ];
 
 export default function ImageGeneration() {
