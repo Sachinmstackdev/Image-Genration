@@ -20,14 +20,14 @@ import {
 } from 'lucide-react';
 
 // Constants for Ideogram model
-const STYLE_TYPES = ['None', 'Photographic', 'Digital Art', 'Comic Book', 'Fantasy Art', 'Analog Film', 'Neon Punk', 'Isometric', 'Low Poly', 'Origami', 'Line Art', 'Cinematic', 'Anime', '3D Model', 'Pixel Art'];
-const MAGIC_PROMPT_OPTIONS = ['Auto', 'None', 'Minimal', 'Moderate', 'Strong'];
+const STYLE_TYPES = ['AUTO', 'GENERAL', 'REALISTIC', 'DESIGN', 'RENDER_3D', 'ANIME'];
+const MAGIC_PROMPT_OPTIONS = ['AUTO', 'ON', 'OFF'];
 
 const ASPECT_RATIOS = [
   { value: '1:1', label: 'Square', resolution: '1024x1024', class: 'aspect-square' },
-  { value: '16:9', label: 'Landscape', resolution: '1024x576', class: 'aspect-video' },
-  { value: '9:16', label: 'Portrait', resolution: '576x1024', class: 'aspect-[9/16]' },
-  { value: '4:3', label: 'Standard', resolution: '1024x768', class: 'aspect-[4/3]' }
+  { value: '16:9', label: 'Landscape', resolution: '1408x704', class: 'aspect-video' },
+  { value: '9:16', label: 'Portrait', resolution: '704x1408', class: 'aspect-[9/16]' },
+  { value: '4:3', label: 'Standard', resolution: '1152x864', class: 'aspect-[4/3]' }
 ];
 
 export default function ImageGeneration() {
@@ -71,8 +71,8 @@ export default function ImageGeneration() {
   const [safetyFilterLevel, setSafetyFilterLevel] = useState('block_medium_and_above');
   const [safetyTolerance, setSafetyTolerance] = useState(2);
   const [raw, setRaw] = useState(false);
-  const [styleType, setStyleType] = useState('None');
-  const [magicPromptOption, setMagicPromptOption] = useState('Auto');
+  const [styleType, setStyleType] = useState('AUTO');
+  const [magicPromptOption, setMagicPromptOption] = useState('AUTO');
   const [seed, setSeed] = useState<number | undefined>(undefined);
 
   const generateContent = async (e: React.FormEvent) => {
