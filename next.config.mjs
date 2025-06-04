@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['replicate.delivery', 'replicate.com'], // Allow images from both domains
+    domains: ['replicate.delivery', 'replicate.com', 'ideogram.ai', 'api.ideogram.ai'], // Allow images from all required domains
   },
 };
 
