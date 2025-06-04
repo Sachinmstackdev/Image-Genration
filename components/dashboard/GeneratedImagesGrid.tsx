@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Download, Maximize2, RefreshCw, Heart } from "lucide-react";
