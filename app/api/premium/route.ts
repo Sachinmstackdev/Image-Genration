@@ -1,5 +1,4 @@
-import { currentUser } from "@clerk/nextjs";
-import { clerkClient } from "@clerk/nextjs/server";
+import { currentUser, clerkClient } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
@@ -11,7 +10,8 @@ export async function POST(req: Request) {
     }
 
     // Update user metadata to set premium status
-    await clerkClient.users.updateUserMetadata(user.id, {
+    const client = await clerkClient();
+    await client.users.updateUserMetadata(user.id, {
       publicMetadata: {
         isPremium: true,
         premiumSince: new Date().toISOString(),
@@ -33,7 +33,8 @@ export async function GET(req: Request) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
-    const clerkUser = await clerkClient.users.getUser(user.id);
+    const client = await clerkClient();
+    const clerkUser = await client.users.getUser(user.id);
     const isPremium = clerkUser.publicMetadata.isPremium;
 
     return NextResponse.json({ isPremium });

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Download, Maximize2, RefreshCw, Heart } from "lucide-react";
+import Image from "next/image";
 
 // Example generated images (replace with real data)
 const exampleImages = [
@@ -43,10 +44,12 @@ export function GeneratedImagesGrid() {
           >
             {/* Image Card */}
             <div className="relative aspect-square rounded-xl overflow-hidden bg-gray-900/50 border border-gray-800">
-              <img
+              <Image
                 src={image.url}
                 alt={image.prompt}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
 
               {/* Hover Overlay */}
